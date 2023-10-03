@@ -1,0 +1,21 @@
+.profile {
+  position: relative;
+  width: 110px;
+  height: 120px;
+  margin: 40px auto 30px;
+}
+
+.profile img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: path("M44 4.35085C50.8068 0.420932 59.1932 0.420932 66 4.35085L97.6936 22.6491C104.5 26.5791 108.694 33.8419 108.694 41.7017V78.2983C108.694 86.1581 104.5 93.4209 97.6936 97.3509L66 115.649C59.1932 119.579 50.8068 119.579 44 115.649L12.3064 97.3509C5.4996 93.4209 1.30642 86.1581 1.30642 78.2983V41.7017C1.30642 33.8419 5.4996 26.5791 12.3064 22.6491L44 4.35085Z");
+}
+
+.profile svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
