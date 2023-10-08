@@ -7,6 +7,9 @@ import styled from "styled-components";
 import { usePathname } from "next/navigation";
 import EducationIcon from "./icons/EducationIcon";
 import GamingIcon from "./icons/GamingIcon";
+import TechIcon from "./icons/TechIcon";
+import EntertainmentIcon from "./icons/EntertainmentIcon";
+import StudentHub from "./icons/StudentHub";
 
 interface NavItemProps {
   selected: boolean
@@ -21,7 +24,8 @@ const Title = styled.h1`
   color: #FFF;
   font-size: 17px;
   font-weight: 700;
-  padding: 16px 12px;
+  padding: 12px 16px;
+  line-height: 20px;
   box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.10) inset;
 `
 
@@ -86,6 +90,27 @@ function Sidebar() {
           <Link href="/education">
             <EducationIcon />
             Education
+          </Link>
+        </NavItem>
+
+        <NavItem selected={pathname === "/tech"}>
+          <Link href="/tech">
+            <TechIcon />
+            Science & Tech
+          </Link>
+        </NavItem>
+
+        <NavItem selected={pathname === "/entertainment"}>
+          <Link href="/entertainment">
+            <EntertainmentIcon />
+            Entertainment
+          </Link>
+        </NavItem>
+
+        <NavItem selected={pathname === "/student-hub"}>
+          <Link href="/student-hub">
+            <StudentHub />
+            Student Hubs
           </Link>
         </NavItem>
       </NavList>
