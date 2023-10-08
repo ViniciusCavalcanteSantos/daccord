@@ -19,4 +19,7 @@
 
 .content {
   background: #1D203E;
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }

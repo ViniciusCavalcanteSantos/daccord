@@ -4,6 +4,7 @@ import { Lato } from 'next/font/google'
 import Sidebar from '@/components/Sidebar'
 import styled from "./page.module.css";
 import UserProfile from '@/components/UserProfile';
+import StyledComponentsRegistry from './lib/registry';
 
 const lato = Lato({ weight: ["300", "400", "700"], subsets: ['latin'] })
 
@@ -20,17 +21,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={lato.className}>
-      <main className={styled.main}>
-        <div className={styled.container}>
-            <Sidebar />
+        <StyledComponentsRegistry>
+          <main className={styled.main}>
+            <div className={styled.container}>
+              <Sidebar />
 
-            <section className={styled.content}>
-              {children}
-            </section>
+              <section className={styled.content}>
+                {children}
+              </section>
 
-            <UserProfile />
-          </div>
-        </main>
+              <UserProfile />
+            </div>
+          </main>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
