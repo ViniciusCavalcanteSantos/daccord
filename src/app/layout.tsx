@@ -5,6 +5,7 @@ import Sidebar from '@/components/Sidebar'
 import styled from "./page.module.css";
 import UserProfile from '@/components/UserProfile';
 import StyledComponentsRegistry from './lib/registry';
+import SearchHeader from '@/components/SearchHeader';
 
 const lato = Lato({ weight: ["300", "400", "700"], subsets: ['latin'] })
 
@@ -27,6 +28,8 @@ export default function RootLayout({
               <Sidebar />
 
               <section className={styled.content}>
+                <SearchHeader />
+
                 {children}
               </section>
 
