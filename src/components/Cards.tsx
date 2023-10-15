@@ -5,6 +5,7 @@ import Link from "next/link"
 import styled from "styled-components"
 import FeaturedCard1 from "@/assets/featured-card-1.png"
 import FeaturedCard2 from "@/assets/featured-card-2.png"
+import PopularCard1 from "@/assets/popular-card-1.png"
 import MemberIcon from "@/assets/member.png"
 import MemberIconOnline from "@/assets/member-online.png"
 
@@ -41,6 +42,7 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 28px;
+  margin-bottom: 32px;
 `
 
 const Card = styled.div`
@@ -142,6 +144,12 @@ const Cards = () => {
             </CardInfo>
           </Card>
         </CardWrapper>
+
+        <CardHeader>
+          <Title>Popular Right Now</Title>
+
+          <Link href="/see-all">See All</Link>
+        </CardHeader>
       </CardContainer>
     </>
   )
