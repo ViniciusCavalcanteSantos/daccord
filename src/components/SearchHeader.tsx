@@ -5,7 +5,7 @@ import SearchIcon from "./icons/SearchIcon";
 import { useState } from "react";
 
 interface PlaceholderProps {
-  visible: boolean
+  visible: number
 }
 
 const Container = styled.div`
@@ -37,7 +37,7 @@ const Placeholder = styled.div<PlaceholderProps>`
   text-align: center;
   font-size: 13px;
   pointer-events: none;
-  opacity: ${props => props.visible ? "1" : "0"};
+  opacity: ${({ visible }) => visible ? "1" : "0"};
 
   > svg {
     margin-right: 4px;
@@ -71,7 +71,7 @@ const SearchHeader = () => {
   return (
     <Container>
       <InputLabel>
-        <Placeholder visible={showPlaceholder}>
+        <Placeholder visible={+showPlaceholder}>
           <SearchIcon />
 
           Explore

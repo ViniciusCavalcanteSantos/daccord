@@ -8,7 +8,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 244px 1fr 244px;
+  grid-template-columns: 76px 244px 1fr 244px;
   width: 100%;
   height: 100%;
   max-width: var(--max-width);

@@ -1,11 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
-import Sidebar from '@/components/Sidebar'
+import Categories from '@/components/Categories'
 import styled from "./page.module.css";
 import UserProfile from '@/components/UserProfile';
 import StyledComponentsRegistry from './lib/registry';
 import SearchHeader from '@/components/SearchHeader';
+import Sidebar from '@/components/Sidebar';
 
 const lato = Lato({ weight: ["300", "400", "700"], subsets: ['latin'] })
 
@@ -26,6 +27,8 @@ export default function RootLayout({
           <main className={styled.main}>
             <div className={styled.container}>
               <Sidebar />
+
+              <Categories />
 
               <section className={styled.content}>
                 <SearchHeader />
