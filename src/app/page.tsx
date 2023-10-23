@@ -8,6 +8,12 @@ import Cards from "@/components/Cards";
 const Container = styled.div`
   padding: 24px;
   width: 100%;
+  max-height: var(--max-height);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `
 
 const Intro = styled.div`

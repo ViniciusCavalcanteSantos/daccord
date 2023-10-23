@@ -6,11 +6,11 @@ import styled from "styled-components"
 import FeaturedCard1 from "@/assets/featured-card-1.png"
 import FeaturedCard2 from "@/assets/featured-card-2.png"
 import PopularCard1 from "@/assets/popular-card-1.png"
+import PopularCard2 from "@/assets/popular-card-1.png"
 import MemberIcon from "@/assets/member.png"
 import MemberIconOnline from "@/assets/member-online.png"
 
 const CardContainer = styled.div`
-  
 `
 
 const CardHeader = styled.div`
@@ -45,40 +45,77 @@ const CardWrapper = styled.div`
   margin-bottom: 32px;
 `
 
-const Card = styled.div`
+const CardHorizontal = styled.div`
   position: relative;
 
   img {
     user-select: none;
     pointer-events: none;
   }
+
+  h4 {
+    left: 12px;
+    bottom: 74px;
+  }
+
+  p {
+    left: 12px;
+    bottom: 34px;
+  }
+
+  .CardInfo {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+`
+
+const CardVertical = styled.div`
+  position: relative;
+
+  img {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  h4 {
+    left: 148px;
+    top: 20px;
+  }
+
+  p {
+    left: 148px;
+    right: 12px;
+    top: 54px;
+  }
+
+  .CardInfo {
+    left: 148px;
+    top: 126px;
+  }
 `
 
 const CardTitle = styled.h4`
   position: absolute;
-  left: 12px;
-  bottom: 74px;
   font-size: 22px;
   font-weight: 600;
 `
+
 const CardSubtitle = styled.p`
   position: absolute;
-  left: 12px;
-  bottom: 34px;
   color: rgba(255, 255, 255, 0.55);
   font-family: inherit;
   font-size: 13px;
   font-weight: 400;
 `
 
-const CardInfo = styled.div`
+const CardInfo = styled.div.attrs({
+  className: "CardInfo"
+})`
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
   color: rgba(255, 255, 255, 0.25);
   font-family: inherit;
   font-size: 12px;
@@ -102,7 +139,7 @@ const Cards = () => {
         </CardHeader>
 
         <CardWrapper>
-          <Card>
+          <CardHorizontal>
             <Image src={FeaturedCard1} alt="" width={320}/>
 
             <CardTitle>Virtual Reality</CardTitle>
@@ -121,9 +158,9 @@ const Cards = () => {
                 345,678 Members
               </span>
             </CardInfo>
-          </Card>
+          </CardHorizontal>
 
-          <Card>
+          <CardHorizontal>
             <Image src={FeaturedCard2} alt="" width={320}/>
 
             <CardTitle>Game Play</CardTitle>
@@ -142,7 +179,7 @@ const Cards = () => {
                 527,955 Members
               </span>
             </CardInfo>
-          </Card>
+          </CardHorizontal>
         </CardWrapper>
 
         <CardHeader>
@@ -150,6 +187,38 @@ const Cards = () => {
 
           <Link href="/see-all">See All</Link>
         </CardHeader>
+
+        <CardWrapper>
+          <CardVertical>
+            <Image src={PopularCard1} alt="" width={320}/>
+
+            <CardTitle>3D Art</CardTitle>
+            <CardSubtitle>A great place to discuss art.</CardSubtitle>
+
+            <CardInfo>
+              <span>
+                <Image src={MemberIconOnline} alt="" width={14} height={14}/>
+
+                345,678 Members
+              </span>
+            </CardInfo>
+          </CardVertical>
+
+          <CardVertical>
+            <Image src={PopularCard2} alt="" width={320}/>
+
+            <CardTitle>NFT</CardTitle>
+            <CardSubtitle>An NFT community so that everyone can share their NFTs.</CardSubtitle>
+
+            <CardInfo>
+              <span>
+                <Image src={MemberIconOnline} alt="" width={14} height={14}/>
+
+                887,789 Members
+              </span>
+            </CardInfo>
+          </CardVertical>
+        </CardWrapper>
       </CardContainer>
     </>
   )
