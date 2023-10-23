@@ -6,7 +6,7 @@ import styled from "styled-components"
 import FeaturedCard1 from "@/assets/featured-card-1.png"
 import FeaturedCard2 from "@/assets/featured-card-2.png"
 import PopularCard1 from "@/assets/popular-card-1.png"
-import PopularCard2 from "@/assets/popular-card-1.png"
+import PopularCard2 from "@/assets/popular-card-2.png"
 import MemberIcon from "@/assets/member.png"
 import MemberIconOnline from "@/assets/member-online.png"
 
@@ -46,7 +46,10 @@ const CardWrapper = styled.div`
 `
 
 const CardHorizontal = styled.div`
+  display: flex;
   position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50); 
 
   img {
     user-select: none;
@@ -71,7 +74,10 @@ const CardHorizontal = styled.div`
 `
 
 const CardVertical = styled.div`
+  display: flex;
   position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50); 
 
   img {
     user-select: none;
