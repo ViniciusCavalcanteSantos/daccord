@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components"
-import ProfilePicture from "./ProfilePicture"
 import ProfileInfo from "./ProfileInfo";
 import MailIcon from "./icons/MailIcon";
 import BellIcon from "./icons/BellIcon";
