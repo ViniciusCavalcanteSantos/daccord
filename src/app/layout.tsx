@@ -7,6 +7,7 @@ import UserProfile from '@/components/UserProfile';
 import StyledComponentsRegistry from './lib/registry';
 import SearchHeader from '@/components/SearchHeader';
 import Sidebar from '@/components/Sidebar';
+import SoundControl from '@/components/SoundControl';
 
 const lato = Lato({ weight: ["300", "400", "700"], subsets: ['latin'] })
 
@@ -31,9 +32,13 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <main className={styled.main}>
             <div className={styled.container}>
-              <Sidebar />
+              <div className={styled.subContainer}>
+                <Sidebar />
 
-              <Categories />
+                <Categories />
+
+                <SoundControl />
+              </div>
 
               <section className={styled.content}>
                 <SearchHeader />
