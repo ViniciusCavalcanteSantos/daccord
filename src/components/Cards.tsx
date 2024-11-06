@@ -7,6 +7,9 @@ import FeaturedCard1 from "@/assets/featured-card-1.png"
 import FeaturedCard2 from "@/assets/featured-card-2.png"
 import PopularCard1 from "@/assets/popular-card-1.png"
 import PopularCard2 from "@/assets/popular-card-2.png"
+import RecentCard1 from "@/assets/recent-card-1.png"
+import RecentCard2 from "@/assets/recent-card-2.png"
+import RecentCard3 from "@/assets/recent-card-3.png"
 import MemberIcon from "@/assets/member.png"
 import MemberIconOnline from "@/assets/member-online.png"
 
@@ -98,6 +101,33 @@ const CardVertical = styled.div`
   .CardInfo {
     left: 148px;
     top: 126px;
+  }
+`
+
+const CardRecentAdd = styled.div`
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.50); 
+
+  img {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  h4 {
+    left: 12px;
+    top: 88px;
+  }
+
+  p {
+    left: 12px;
+    top: 122px;
+  }
+
+  .CardInfo {
+    left: 12px;
+    bottom: 8px;
   }
 `
 
@@ -224,6 +254,59 @@ const Cards = () => {
               </span>
             </CardInfo>
           </CardVertical>
+        </CardWrapper>
+
+        <CardHeader>
+          <Title>Recent Add</Title>
+
+          <Link href="/see-all">See All</Link>
+        </CardHeader>
+
+        <CardWrapper>
+          <CardRecentAdd>
+            <Image src={RecentCard1} alt="" width={200}/>
+
+            <CardTitle>Movie recapped</CardTitle>
+            <CardSubtitle>Discuss your favourite movies and TV serie here.</CardSubtitle>
+
+            <CardInfo>
+              <span>
+                <Image src={MemberIcon} alt="" width={14} height={14}/>
+
+                5 Members
+              </span>
+            </CardInfo>
+          </CardRecentAdd>
+
+          <CardRecentAdd>
+            <Image src={RecentCard2} alt="" width={200}/>
+
+            <CardTitle>Science</CardTitle>
+            <CardSubtitle>A community for a scientific exploration enthusiast.</CardSubtitle>
+
+            <CardInfo>
+              <span>
+                <Image src={MemberIcon} alt="" width={14} height={14}/>
+
+                58 Members
+              </span>
+            </CardInfo>
+          </CardRecentAdd>
+
+          <CardRecentAdd>
+            <Image src={RecentCard3} alt="" width={200}/>
+
+            <CardTitle>Space</CardTitle>
+            <CardSubtitle>A community for the space enthusiast.</CardSubtitle>
+
+            <CardInfo>
+              <span>
+                <Image src={MemberIcon} alt="" width={14} height={14}/>
+
+                209 Members
+              </span>
+            </CardInfo>
+          </CardRecentAdd>
         </CardWrapper>
       </CardContainer>
     </>
