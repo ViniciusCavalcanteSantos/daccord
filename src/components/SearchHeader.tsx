@@ -14,7 +14,7 @@ const Container = styled.div`
   align-items: center;
   background: #2C2F48;
   width: 100%;
-  height: 44px;
+  min-height: 44px;
 `
 
 const InputLabel = styled.label`
