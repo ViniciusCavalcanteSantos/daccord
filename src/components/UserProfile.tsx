@@ -8,6 +8,9 @@ import ChatIcon from "./icons/ChatIcon";
 import SettingsIcon from "./icons/SettingsIcon";
 import HexagonBorder from "./HexagonBorder";
 
+import iconInstagram from "@/assets/icon-instagram.png"
+import iconTwitter from "@/assets/icon-twitter.png"
+
 const Aside = styled.aside`
   background: #2C2F48;
   box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.10) inset;
@@ -63,6 +66,16 @@ const CardInfo = styled.div`
   p {
     color: rgba(255, 255, 255, 0.25);
     font-size: 13px;
+  }
+`
+
+const CardsSocialMedia = styled.ul`
+  display: grid;
+  gap: 8px;
+  padding: 0 16px;
+
+  h3 {
+    text-decoration: underline;
   }
 `
 
@@ -126,6 +139,28 @@ const UserProfile = () => {
           </CardInfo>
         </Card>
       </Cards>
+
+      <Title>
+        Follow me
+      </Title>
+
+      <CardsSocialMedia>
+        <Card>
+          <HexagonBorder src={iconInstagram.src} width={44} height={44} color1="#2e314b" color2="#2e314b"/>
+
+          <CardInfo>
+            <h3>@aksondesign</h3>
+          </CardInfo>
+        </Card>
+
+        <Card>
+          <HexagonBorder src={iconTwitter.src} width={44} height={44} color1="#2e314b" color2="#2e314b"/>
+
+          <CardInfo>
+            <h3>@aksondesign</h3>
+          </CardInfo>
+        </Card>
+      </CardsSocialMedia>
     </Aside>
   )
 }
