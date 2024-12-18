@@ -8,6 +8,8 @@ import StyledComponentsRegistry from './lib/registry';
 import SearchHeader from '@/components/SearchHeader';
 import Sidebar from '@/components/Sidebar';
 import SoundControl from '@/components/SoundControl';
+import Head from 'next/head';
+import { Viewport } from 'next/dist/lib/metadata/types/extra-types';
 
 const lato = Lato({ weight: ["300", "400", "700"], subsets: ['latin'] })
 
@@ -18,7 +20,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png"
   },
-  manifest: '/site.webmanifest'
+  manifest: '/site.webmanifest',
+  viewport: {
+    width: "1300",
+  } as Viewport
 }
 
 export default function RootLayout({
